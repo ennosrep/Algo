@@ -1,3 +1,4 @@
+#!/bin/bash
 while [ true ]; do
     echo -e "\nMenu de gestion des utilisateurs"
     echo "1. Créer un utilisateur"
