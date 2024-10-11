@@ -21,7 +21,11 @@ while [ true ]; do
             echo -e "\nCet utilisateur n'existe pas. Recommencez."
         else 
             sudo userdel $name
-            echo -e "\nCet utilisateur a été supprimé."
+            if [ $? -eq 0 ]; then
+                echo -e "\nCet utilisateur a été supprimé."
+            else
+                echo -e "\nErreur lors de la suppression de l'utilisateur."
+            fi
         fi
         ;;
 
